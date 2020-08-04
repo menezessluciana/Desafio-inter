@@ -5,7 +5,7 @@ class HomePage extends StatelessWidget {
   Widget build(BuildContext context) {
     double height = MediaQuery.of(context).size.height;
     double width = MediaQuery.of(context).size.width;
-    return Scaffold(  
+    return Scaffold(
       backgroundColor: Colors.white,
       body: Container(
         height: height,
@@ -29,9 +29,10 @@ class HomePage extends StatelessWidget {
                   child: Container(
                 width: 130,
                 decoration: BoxDecoration(
-                    image: DecorationImage(
-                  image: AssetImage('assets/logo.png'),
-                )),
+                  image: DecorationImage(
+                    image: AssetImage('assets/logo.png'),
+                  ),
+                ),
               )),
             ),
             Positioned(
@@ -63,10 +64,12 @@ class HomePage extends StatelessWidget {
                                       children: <Widget>[
                                         CircleAvatar(
                                           radius: 25,
-                                          child: Text('RA',
-                                              style: TextStyle(
-                                                  color: Colors.white,
-                                                  fontSize: 12)),
+                                          child: Text(
+                                            'RA',
+                                            style: TextStyle(
+                                                color: Colors.white,
+                                                fontSize: 12),
+                                          ),
                                           backgroundColor:
                                               Color.fromRGBO(210, 213, 226, 1),
                                         ),
@@ -74,33 +77,48 @@ class HomePage extends StatelessWidget {
                                         Column(
                                           children: <Widget>[
                                             Container(
-                                              margin: EdgeInsets.only(bottom: 7),
-                                              child: Text('Operador',
-                                                  style: TextStyle(fontSize: 15, color: Color(0xFFB9B9C5))),
+                                              margin:
+                                                  EdgeInsets.only(bottom: 7),
+                                              child: Text(
+                                                'Operador',
+                                                style: TextStyle(
+                                                    fontSize: 15,
+                                                    color: Color(0xFFB9B9C5)),
+                                              ),
                                             ),
-                                            Text('112222',  style: TextStyle(fontSize: 15, color: Color(0xFFB9B9C5)))
+                                            Text(
+                                              '112222',
+                                              style: TextStyle(
+                                                  fontSize: 15,
+                                                  color: Color(0xFFB9B9C5)),
+                                            )
                                           ],
                                         )
                                       ],
                                     ),
                                   ),
                                   Padding(
-                                    padding: const EdgeInsets.only(
-                                        right: 10),
+                                    padding: const EdgeInsets.only(right: 10),
                                     child: Container(
                                       height: 30,
                                       width: 90,
                                       decoration: BoxDecoration(
-                                        border: Border.all(
-                                           color: Colors.grey[200]
-                                        ),
-                                        borderRadius: BorderRadius.circular(5)
-                                        ),
+                                          border: Border.all(
+                                              color: Colors.grey[200]),
+                                          borderRadius:
+                                              BorderRadius.circular(5)),
                                       child: InkWell(
-                                        onTap: (){},
-                                        child: 
-                                           Center(child: Text('TROCAR', style: TextStyle(fontSize: 10, color: Colors.grey[700], fontWeight: FontWeight.bold)))
-                                      )
+                                        onTap: () {},
+                                        child: Center(
+                                          child: Text(
+                                            'TROCAR',
+                                            style: TextStyle(
+                                                fontSize: 10,
+                                                color: Colors.grey[700],
+                                                fontWeight: FontWeight.bold),
+                                          ),
+                                        ),
+                                      ),
                                     ),
                                   ),
                                 ],
@@ -179,22 +197,25 @@ class HomePage extends StatelessWidget {
                                 height: 50,
                                 width: 50,
                                 decoration: BoxDecoration(
-                                  borderRadius: BorderRadius.circular(30),
-                                  color: Colors.white
-                                ),
+                                    borderRadius: BorderRadius.circular(30),
+                                    color: Colors.white),
                                 child: Padding(
                                   padding: const EdgeInsets.all(6.0),
                                   child: Row(
-                                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                                    mainAxisAlignment:
+                                        MainAxisAlignment.spaceBetween,
                                     children: <Widget>[
-                                    _littleDot(),
-                                    _littleDot(),
-                                    _littleDot(),
-                                    _littleDot(),
-                                  ],),
+                                      _littleDot(),
+                                      _littleDot(),
+                                      _littleDot(),
+                                      _littleDot(),
+                                    ],
+                                  ),
                                 ),
                               ),
-                              Text('Gerar', style: TextStyle(color: Color(0xFF8b8b93), fontSize: 12))
+                              Text('Gerar',
+                                  style: TextStyle(
+                                      color: Color(0xFF8b8b93), fontSize: 12))
                             ],
                           )
                         ],
@@ -208,33 +229,39 @@ class HomePage extends StatelessWidget {
               top: 600,
               left: 50,
               right: 50,
-              child: Column(children: <Widget>[
-                Text('Em caso de dúvidas entre em contato', style: TextStyle(fontSize: 12, color: Color(0xFFC0C4CA), fontWeight: FontWeight.bold)),
-                SizedBox(height: 2),
-                Text('Capitais e região metropolitana 3003-4070', style: TextStyle(fontSize: 12, color: Color(0xFFC0C4CA))),
-                SizedBox(height: 2),
-                Text('Demais localidade: 0800 940 0007', style: TextStyle(fontSize: 12, color: Color(0xFFC0C4CA))),
-              ],),
+              child: Column(
+                children: <Widget>[
+                  Text('Em caso de dúvidas entre em contato',
+                      style: TextStyle(
+                          fontSize: 12,
+                          color: Color(0xFFC0C4CA),
+                          fontWeight: FontWeight.bold)),
+                  SizedBox(height: 2),
+                  Text('Capitais e região metropolitana 3003-4070',
+                      style: TextStyle(fontSize: 12, color: Color(0xFFC0C4CA))),
+                  SizedBox(height: 2),
+                  Text('Demais localidade: 0800 940 0007',
+                      style: TextStyle(fontSize: 12, color: Color(0xFFC0C4CA))),
+                ],
+              ),
             ),
           ],
         ),
-
       ),
     );
   }
 }
 
-
- Widget _littleDot() {
-    return Container(
-      width: 6,
-      height: 6,
-      decoration: BoxDecoration(
-        border: Border.all(
-          color: Color(0XFFFE6829),
-          width: 2,
-        ),
-        borderRadius: BorderRadius.circular(100),
+Widget _littleDot() {
+  return Container(
+    width: 6,
+    height: 6,
+    decoration: BoxDecoration(
+      border: Border.all(
+        color: Color(0XFFFE6829),
+        width: 2,
       ),
-    );
-  }
+      borderRadius: BorderRadius.circular(100),
+    ),
+  );
+}
